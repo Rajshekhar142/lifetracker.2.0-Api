@@ -15,8 +15,7 @@ export class AuthController {
     const token = this.authService.validateLogin(username, password);
 
     res.cookie('access_token', token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: true,
       sameSite: 'none',
       maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
     });
