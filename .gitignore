@@ -1,0 +1,48 @@
+# Dependencies
+/node_modules
+/dist
+/artifacts
+
+# NestJS CLI and Build Cache
+/.nest
+/tsc-output-file-share
+
+# Environment Variables (Keep secrets private!)
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+*.env
+
+# TypeScript Compilation Info
+*.tsbuildinfo
+
+# Logs and Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+.pids
+*.pid
+*.seed
+*.pid.lock
+
+# Testing Coverage and Reports
+/coverage
+/.nyc_output
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE and Code Editors Settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
