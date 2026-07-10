@@ -2,15 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { SupabaseService } from '../supabase/supabase.service';
 import { CreateLogDto } from './dto/create-log.dto';
 
-import { Cron } from '@nestjs/schedule';
 @Injectable()
 export class LogsService {
   constructor(private supabase: SupabaseService) {}
 
-  @Cron('*/1 * * * *') // fires every minute, TEMPORARY for testing
-  testCron() {
-    console.log('Cron fired at:', new Date().toISOString());
-  }
 
   private getISTDateString(): string {
     // Get "today" as a YYYY-MM-DD string, in IST, regardless of server timezone
